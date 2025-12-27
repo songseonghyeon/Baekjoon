@@ -10,7 +10,7 @@ public class Main {
 		int T = Integer.parseInt(br.readLine());
 		
 		StringBuilder sb = new StringBuilder();
-		
+		/*
 		for(int i=0; i<T; i++) {
 			String[] arr = br.readLine().split(" ");
 			int count = Integer.parseInt(arr[0]);
@@ -23,6 +23,18 @@ public class Main {
 			}
 			sb.append("\n");
 		}
+		*/
+		for(int i=0; i<T; i++) {
+			String[] arr = br.readLine().split(" ");
+			int count = Integer.parseInt(arr[0]);
+			String[] test = arr[1].split("");
+			
+			for(String data:test) {
+				sb.append(data.repeat(count));
+			}
+			sb.append("\n");
+		}
+		
 		
 		System.out.println(sb);
 		
