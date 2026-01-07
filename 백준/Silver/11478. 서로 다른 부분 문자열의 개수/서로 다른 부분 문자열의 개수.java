@@ -1,0 +1,27 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		Set<String> set = new HashSet<String>();
+		
+		String[] str = br.readLine().split("");
+		for(int i=0; i<str.length; i++) {
+			StringBuilder sb = new StringBuilder();
+			for(int j=i; j<str.length; j++) {
+				sb.append(str[j]);
+				//System.out.println(sb);
+				set.add(String.valueOf(sb));
+			}
+		}
+		
+		
+		
+		System.out.println(set.size());
+	}
+}
